@@ -22,6 +22,14 @@ require("lazy").setup({
 	"EdenEast/nightfox.nvim", -- :colorscheme carbonfox
 	{ 'nvim-treesitter/nvim-treesitter',  opts = { run = ':TSUpdate' } },
 	"theprimeagen/harpoon",
+	'windwp/nvim-ts-autotag',
+	{
+		'windwp/nvim-autopairs',
+		event = "InsertEnter",
+		config = true
+		-- use opts = {} for passing setup options
+		-- this is equalent to setup({}) function
+	},
 	"mbbill/undotree",
 	{
 		"supermaven-inc/supermaven-nvim",
