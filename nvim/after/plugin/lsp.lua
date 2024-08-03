@@ -23,6 +23,8 @@ require('mason-lspconfig').setup({
 	  'lua_ls',
 	  'pylsp',
 	  'taplo',
+	  'sqlls',
+	  'bashls',
   },
   handlers = {
     function(server_name)
@@ -30,6 +32,14 @@ require('mason-lspconfig').setup({
     end,
   },
 })
+
+require'lspconfig'.sqlls.setup{
+  capabilities = capabilities,
+  filetypes = { 'sql' },
+  root_dir = function(_)
+    return vim.loop.cwd()
+  end,
+}
 
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
