@@ -28,7 +28,7 @@ require("lazy").setup({
 		event = "InsertEnter",
 		config = true
 		-- use opts = {} for passing setup options
-		-- this is equalent to setup({}) function
+		-- this is equivalent to setup({}) function
 	},
 	"mbbill/undotree",
 	{

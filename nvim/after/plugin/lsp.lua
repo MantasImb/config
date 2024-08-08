@@ -80,8 +80,8 @@ cmp.setup({
         require('luasnip').lsp_expand(args.body)
       end,
     },
-    sources = {
-      { name = "supermaven" },
-    },
+    -- sources = {
+    --   { name = "supermaven" },
+    -- },
   })
 
