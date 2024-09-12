@@ -1,0 +1,12 @@
+[fonts]
+size = 18
+family = "0xProto Nerd Font"
+
+[colors]
+cursor = "#ffb060"
+
+[window]
+mode = "Fullscreen"
+
+[window.background-image]
+path = "/Users/mantas/.config/rio/fortune.jpeg"

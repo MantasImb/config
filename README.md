@@ -1,0 +1,11 @@
+- disable native control+space in macos
+- brew install alfred neovim node tmux git ripgrep fd
+- brew install --cask rio
+- clone this repo
+- clone tpm
+- download and add a fixed font
+- open tmux and run `tmux source-file ~/.tmux.conf`
+- press `prefix + I` to install plugins
+- [syntax highlights](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+- [better 'ls'](https://github.com/eza-community/eza?tab=readme-ov-file)
+
