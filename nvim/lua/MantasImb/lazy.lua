@@ -18,7 +18,7 @@ require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	"tpope/vim-fugitive",
-	"christoomey/vim-tmux-navigator",
+	{"christoomey/vim-tmux-navigator", lazy = false},
 	"EdenEast/nightfox.nvim", -- :colorscheme carbonfox
 	{ 'nvim-treesitter/nvim-treesitter',  opts = { run = ':TSUpdate' } },
 	"theprimeagen/harpoon",
@@ -40,14 +40,29 @@ require("lazy").setup({
 	--- Uncomment the two plugins below if you want to manage the language servers from neovim
 	{ 'williamboman/mason.nvim' },
 	{ 'williamboman/mason-lspconfig.nvim' },
-
-	{ 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
+	{
+		'dzfrias/nvim-classy',
+		opts = {
+			filetypes = {
+				astro =
+				[[ ((attribute_name) @attr_name (#eq? @attr_name "class") (quoted_attribute_value (attribute_value) @attr_value)) ]],
+				html =
+				[[ ((attribute_name) @attr_name (#eq? @attr_name "class") (quoted_attribute_value (attribute_value) @attr_value)) ]],
+				javascript = [[
+      ;; jsx
+      ((property_identifier) @attr_name (#eq? @attr_name "class") [(jsx_expression (_)?) (string)] @attr_value) ]],
+				svelte =
+				[[ ((attribute_name) @attr_name (#eq? @attr_name "class") (quoted_attribute_value (attribute_value) @attr_value)) ]],
+			}
+		}
+	},
+	{ 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
 	{ 'neovim/nvim-lspconfig' },
 	{ 'hrsh7th/cmp-nvim-lsp' },
 	{ 'hrsh7th/nvim-cmp' },
 	{ 'L3MON4D3/LuaSnip' },
 	-- "gc" to comment visual regions/lines
-	{ "numToStr/Comment.nvim",            opts = {} },
+	{ "numToStr/Comment.nvim",     opts = {} },
 
 	{
 		"lewis6991/gitsigns.nvim",

@@ -10,3 +10,6 @@ mode = "Fullscreen"
 
 [window.background-image]
 path = "/Users/mantas/.config/rio/fortune.jpeg"
+
+[mouse]
+enabled = true
