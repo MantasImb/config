@@ -60,7 +60,8 @@ lsp_zero.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
 	vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
 	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-	vim.keymap.set("n", "<leader>h", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, opts)
+	vim.keymap.set("n", "<leader>h", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end,
+		opts)
 end)
 
 
@@ -85,3 +86,25 @@ cmp.setup({
 	--   { name = "supermaven" },
 	-- },
 })
+
+local status, null_ls = pcall(require, "null-ls")
+if (not status) then return end
+
+-- null_ls.setup({})
+
+local status, prettier = pcall(require, "prettier")
+if (not status) then return end
+
+prettier.setup {
+	bin = 'prettierd',
+	filetypes = {
+		"css",
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"json",
+		"scss",
+		"less"
+	}
+}

@@ -1,5 +1,5 @@
 - disable native control+space in macos
-- brew install alfred neovim node tmux git ripgrep fd gh
+- brew install alfred neovim node tmux git ripgrep fd gh prettierd oven-sh/bun/bun
 - brew install --cask rio
 - clone this repo
 - clone tpm

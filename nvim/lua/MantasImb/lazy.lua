@@ -40,24 +40,10 @@ require("lazy").setup({
 	--- Uncomment the two plugins below if you want to manage the language servers from neovim
 	{ 'williamboman/mason.nvim' },
 	{ 'williamboman/mason-lspconfig.nvim' },
-	{
-		'dzfrias/nvim-classy',
-		opts = {
-			filetypes = {
-				astro =
-				[[ ((attribute_name) @attr_name (#eq? @attr_name "class") (quoted_attribute_value (attribute_value) @attr_value)) ]],
-				html =
-				[[ ((attribute_name) @attr_name (#eq? @attr_name "class") (quoted_attribute_value (attribute_value) @attr_value)) ]],
-				javascript = [[
-      ;; jsx
-      ((property_identifier) @attr_name (#eq? @attr_name "class") [(jsx_expression (_)?) (string)] @attr_value) ]],
-				svelte =
-				[[ ((attribute_name) @attr_name (#eq? @attr_name "class") (quoted_attribute_value (attribute_value) @attr_value)) ]],
-			}
-		}
-	},
 	{ 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
 	{ 'neovim/nvim-lspconfig' },
+	{ "jose-elias-alvarez/null-ls.nvim" },
+	"MunifTanjim/prettier.nvim",
 	{ 'hrsh7th/cmp-nvim-lsp' },
 	{ 'hrsh7th/nvim-cmp' },
 	{ 'L3MON4D3/LuaSnip' },
