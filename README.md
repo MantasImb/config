@@ -2,7 +2,7 @@
 - brew install alfred neovim node tmux git ripgrep fd gh prettierd oven-sh/bun/bun
 - brew install --cask rio
 - clone this repo
-- clone tpm
+- clone tpm (https://github.com/tmux-plugins/tpm)
 - download and add a fixed font
 - open tmux and run `tmux source-file ~/.tmux.conf`
 - press `prefix + I` to install plugins

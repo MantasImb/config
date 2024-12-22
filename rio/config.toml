@@ -5,6 +5,9 @@ family = "0xProto Nerd Font"
 [colors]
 cursor = "#ffb060"
 
+[navigation]
+mode = "Bookmark"
+
 [window]
 mode = "Fullscreen"
 

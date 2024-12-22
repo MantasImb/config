@@ -16,11 +16,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
+	{ 'echasnovski/mini.surround', version = false },
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	"tpope/vim-fugitive",
-	{"christoomey/vim-tmux-navigator", lazy = false},
+	{ "christoomey/vim-tmux-navigator",  lazy = false },
 	"EdenEast/nightfox.nvim", -- :colorscheme carbonfox
-	{ 'nvim-treesitter/nvim-treesitter',  opts = { run = ':TSUpdate' } },
+	{ 'nvim-treesitter/nvim-treesitter', opts = { run = ':TSUpdate' } },
 	"theprimeagen/harpoon",
 	'windwp/nvim-ts-autotag',
 	{
@@ -40,7 +41,7 @@ require("lazy").setup({
 	--- Uncomment the two plugins below if you want to manage the language servers from neovim
 	{ 'williamboman/mason.nvim' },
 	{ 'williamboman/mason-lspconfig.nvim' },
-	{ 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
+	{ 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
 	{ 'neovim/nvim-lspconfig' },
 	{ "jose-elias-alvarez/null-ls.nvim" },
 	"MunifTanjim/prettier.nvim",
@@ -48,7 +49,7 @@ require("lazy").setup({
 	{ 'hrsh7th/nvim-cmp' },
 	{ 'L3MON4D3/LuaSnip' },
 	-- "gc" to comment visual regions/lines
-	{ "numToStr/Comment.nvim",     opts = {} },
+	{ "numToStr/Comment.nvim", opts = {} },
 
 	{
 		"lewis6991/gitsigns.nvim",
@@ -62,6 +63,17 @@ require("lazy").setup({
 			},
 		},
 	},
+
+	-- {
+	-- 	"nvim-tree/nvim-tree.lua",
+	-- 	lazy = false,
+	-- 	dependencies = {
+	-- 		"nvim-tree/nvim-web-devicons",
+	-- 	},
+	-- 	config = function()
+	-- 		require("nvim-tree").setup()
+	-- 	end,
+	-- },
 
 
 	{ -- Fuzzy Finder (files, lsp, etc)

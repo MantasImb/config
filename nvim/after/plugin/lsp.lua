@@ -90,7 +90,7 @@ cmp.setup({
 local status, null_ls = pcall(require, "null-ls")
 if (not status) then return end
 
--- null_ls.setup({})
+null_ls.setup({})
 
 local status, prettier = pcall(require, "prettier")
 if (not status) then return end
