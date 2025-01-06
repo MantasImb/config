@@ -16,6 +16,8 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ---- Eza (better ls) -----
 alias ls="eza --icons=always"
 
+alias v="nvim"
+
 export PS1="%n$"
 
 # Load color definitions

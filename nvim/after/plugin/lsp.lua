@@ -82,9 +82,6 @@ cmp.setup({
 			require('luasnip').lsp_expand(args.body)
 		end,
 	},
-	-- sources = {
-	--   { name = "supermaven" },
-	-- },
 })
 
 local status, null_ls = pcall(require, "null-ls")
