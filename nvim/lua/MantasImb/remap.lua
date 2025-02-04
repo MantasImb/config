@@ -33,4 +33,14 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- This here creates an executable from a currently open file
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>c", ":ClassyToggleConceal<CR>")
+-- vim.keymap.set("n", "<leader>c", ":ClassyToggleConceal<CR>")
+vim.keymap.set("n", "<leader>c", function()
+	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+	if (vim.lsp.inlay_hint.is_enabled()) then
+		print("Inlay hints enabled.")
+	else
+		print("Inlay hints disabled.")
+	end
+end)
+
+vim.keymap.set("n", "<leader>cp", ":CccPick<CR>")

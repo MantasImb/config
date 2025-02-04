@@ -31,7 +31,7 @@ require("lazy").setup({
 			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
 			--- The below dependencies are optional,
-			"hrsh7th/nvim-cmp",    -- autocompletion for avante commands and mentions
+			"hrsh7th/nvim-cmp",   -- autocompletion for avante commands and mentions
 			"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
 			"zbirenbaum/copilot.lua", -- for providers='copilot'
 			{
@@ -70,7 +70,7 @@ require("lazy").setup({
 			ccc.setup({
 				highlighter = {
 					auto_enable = true,
-					lsp = true,
+					lsp = false,
 				},
 			})
 		end
@@ -79,7 +79,7 @@ require("lazy").setup({
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	"tpope/vim-fugitive",
 	{ "christoomey/vim-tmux-navigator", lazy = false },
-	"EdenEast/nightfox.nvim", -- :colorscheme carbonfox
+	"EdenEast/nightfox.nvim", -- :lua ColorMyPencils()
 	{ 'nvim-treesitter/nvim-treesitter',  opts = { run = ':TSUpdate' } },
 	"theprimeagen/harpoon",
 	'windwp/nvim-ts-autotag',
@@ -95,7 +95,7 @@ require("lazy").setup({
 	{ 'williamboman/mason.nvim' },
 	{ 'williamboman/mason-lspconfig.nvim' },
 	{ 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
-	{ 'neovim/nvim-lspconfig' },
+	{ 'neovim/nvim-lspconfig', },
 	{ "jose-elias-alvarez/null-ls.nvim" },
 	"MunifTanjim/prettier.nvim",
 	{ 'hrsh7th/cmp-nvim-lsp' },
