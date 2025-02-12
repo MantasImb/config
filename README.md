@@ -2,14 +2,17 @@
 - brew install alfred neovim node tmux git ripgrep fd gh prettierd oven-sh/bun/bun
 - brew install --cask rio nikitabobko/tap/aerospace
 - clone this repo
-- clone tpm (https://github.com/tmux-plugins/tpm)
+- clone tpm (<https://github.com/tmux-plugins/tpm>)
 - download and add a fixed font
 - open tmux and run `tmux source-file ~/.tmux.conf`
 - press `prefix + I` to install plugins
 - [syntax highlights](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 - [better 'ls'](https://github.com/eza-community/eza?tab=readme-ov-file)
 
+- [nvim setup 0-100](https://www.youtube.com/watch?v=evCmP4hH7ZU)
+
 .zshrc
+
 ```
 export PATH="/opt/homebrew/bin:$PATH" >> ~/.zshrcsource
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
