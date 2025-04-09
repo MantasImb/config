@@ -1,3 +1,5 @@
+# Set-up steps
+
 - disable native control+space in macos
 - brew install alfred neovim node tmux git ripgrep fd gh prettierd oven-sh/bun/bun
 - brew install --cask rio nikitabobko/tap/aerospace
@@ -13,7 +15,7 @@
 
 .zshrc
 
-```
+```sh
 export PATH="/opt/homebrew/bin:$PATH" >> ~/.zshrcsource
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ---- Eza (better ls) -----
