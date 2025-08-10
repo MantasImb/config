@@ -3,8 +3,3 @@
 -- Add any additional keymaps here
 
 vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = false })
-
--- vim.keymap.set("n", "<leader>as", function()
---   require("copilot.suggestion").toggle_auto_trigger()
---   print("Suggestions toggled.")
--- end, { noremap = true })

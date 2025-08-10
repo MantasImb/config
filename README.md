@@ -1,8 +1,8 @@
 # Set-up steps
 
 - disable native control+space in macos
-- brew install alfred neovim node tmux git ripgrep fd gh prettierd oven-sh/bun/bun
-- brew install --cask rio nikitabobko/tap/aerospace
+- brew install alfred neovim node tmux git ripgrep fd gh prettierd oven-sh/bun/bun orbstack bruno llvm
+- brew install --cask rio nikitabobko/tap/aerospace gimp zen 1password godot-mono
 - clone this repo
 - clone tpm (<https://github.com/tmux-plugins/tpm>)
 - download and add a fixed font

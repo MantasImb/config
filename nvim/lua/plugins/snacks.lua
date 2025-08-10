@@ -3,6 +3,21 @@ return {
   priority = 1000,
   lazy = false,
   ---@type snacks.Config
+  keys = {
+    {
+      "<leader>am",
+      function()
+        local chat = require("CopilotChat")
+        if not chat then
+          return
+        end
+        chat.select_model()
+      end,
+      mode = "n",
+      desc = "CopilotChat: Select Model",
+      silent = true,
+    },
+  },
   opts = {},
   init = function()
     vim.api.nvim_create_autocmd("User", {
