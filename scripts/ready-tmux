@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Script that runs other .ready-tmux scripts
+
+LOCAL_READY_TMUX="$PWD/.ready-tmux"
+DEFAULT_READY_TMUX="$HOME/.config/scripts/.ready-tmux"
+
+if [[ -x "$LOCAL_READY_TMUX" ]]; then
+  "$LOCAL_READY_TMUX"
+elif [[ -x "$DEFAULT_READY_TMUX" ]]; then
+  "$DEFAULT_READY_TMUX"
+fi
+clear

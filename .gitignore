@@ -1,0 +1,15 @@
+# Ignore everything
+/*
+
+# But not these folders
+!.gitignore
+!/aerospace/
+!/nvim/
+!/rio/
+!/scripts/
+!/tmux/
+
+# ---
+tmux/plugins
+.DS_Store
+lazy-lock.json

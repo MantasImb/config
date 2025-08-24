@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+selected=$(find ~/repos -mindepth 1 -maxdepth 1 -type d | fzf)
+if [[ -z "$selected" ]]; then
+  exit 0
+fi
+
+selected_name=$(basename "$selected" | tr ":,. " "____")
+
+switch_to() {
+  if [[ -z "$TMUX" ]]; then
+    # If we are not in tmux then we attach to that session.
+    tmux attach-session -t "$selected_name"
+  else
+    # If we are in tmux then we switch to session.
+    tmux switch-client -t "$selected_name"
+  fi
+}
+
+if tmux has-session -t="$selected_name" 2>/dev/null; then
+  switch_to
+  exit 0
+fi
+
+# If the session doesn't exist, create a detached session and use the switch_to function to handle the session accordingly.
+tmux new-session -ds "$selected_name" -c "$selected"
+switch_to
+
+# Then run the script to prepare the workspace
+tmux send-keys -t "$selected_name" "ready-tmux" ^M

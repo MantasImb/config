@@ -1,7 +1,7 @@
 # Set-up steps
 
 - disable native control+space in macos
-- brew install alfred neovim node tmux git ripgrep fd gh prettierd oven-sh/bun/bun orbstack bruno llvm
+- brew install alfred neovim node fzf tmux git ripgrep fd gh prettierd oven-sh/bun/bun orbstack bruno llvm
 - brew install --cask rio nikitabobko/tap/aerospace gimp zen 1password godot-mono
 - clone this repo
 - clone tpm (<https://github.com/tmux-plugins/tpm>)
@@ -17,6 +17,7 @@
 
 ```sh
 export PATH="/opt/homebrew/bin:$PATH" >> ~/.zshrcsource
+export PATH="$HOME/.local/bin:$PATH"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ---- Eza (better ls) -----
 alias ls="eza --icons=always"
@@ -27,6 +28,12 @@ export PS1="%n$"
 
 # Load color definitions
  autoload -U colors && colors
+
+# Enable fzf key bindings and auto-completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Use fzf for command history search
+bindkey '^R' fzf-history-widget
 
  custom_prompt() {
      local GREEN="%{$fg_bold[green]%}"

@@ -6,10 +6,15 @@ family = "0xProto Nerd Font"
 cursor = "#ffb060"
 
 [navigation]
-mode = "Bookmark"
+mode = "Plain"
 
 # [window]
 # mode = "Fullscreen"
+
+[bindings]
+keys = [
+  { key = "a", with = "control", action = "Run(mkdir ~/repos/thisworked)" },
+]
 
 [window.background-image]
 path = "/Users/mantas/.config/rio/fortune.jpeg"

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# this is the default tmux session starter script
+
+tmux send-keys -t neovim 'nvim .' C-m
+# `exec zsh` needs to be added because otherwise the shell will exit when the command finishes.
+tmux neww -n "run"
+tmux neww -n "terminal" 'git status; exec zsh'
+tmux select-window -t neovim
