@@ -1,8 +1,9 @@
 # Ignore everything
 /*
 
-# But not these folders
+# But not these
 !.gitignore
+!README.md
 !/aerospace/
 !/nvim/
 !/rio/

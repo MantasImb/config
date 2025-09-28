@@ -13,6 +13,7 @@
 
 - [nvim setup 0-100](https://www.youtube.com/watch?v=evCmP4hH7ZU)
 
+Clone scripts and add to .zshrc
 .zshrc
 
 ```sh
