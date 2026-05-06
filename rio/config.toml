@@ -1,6 +1,12 @@
 [fonts]
 size = 18
-family = "0xProto Nerd Font"
+family = "0xProto Nerd Font Mono"
+# family = "Helvetica"
+
+# fonts.extras = [{ family = "Symbols Nerd Font Mono" }]
+fonts.emoji = [{ family = "Helvetica" }]
+
+fonts.use-drawable-chars = true
 
 [colors]
 cursor = "#ffb060"
@@ -10,11 +16,6 @@ mode = "Plain"
 
 # [window]
 # mode = "Fullscreen"
-
-[bindings]
-keys = [
-  { key = "a", with = "control", action = "Run(mkdir ~/repos/thisworked)" },
-]
 
 [window.background-image]
 path = "/Users/mantas/.config/rio/fortune.jpeg"
